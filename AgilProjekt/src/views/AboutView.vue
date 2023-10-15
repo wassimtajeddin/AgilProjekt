@@ -17,12 +17,9 @@
 
 
  .about-section {
-
   text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
-  }
+  padding: 20px;
+}
 
   h1 {
     font-size: 5em;

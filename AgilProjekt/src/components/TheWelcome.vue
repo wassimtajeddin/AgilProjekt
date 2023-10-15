@@ -2,36 +2,42 @@
 </script>
 
 <template>
-
+<div>
   <div class="info">
- <h1> Welcome to Quiztastic!</h1>
- <p>🚀 Welcome to the Ultimate Quiz Showdown! 🌟</p>
- <p>Are you ready to put your knowledge to the test and embark on a thrilling trivia adventure? Whether you're a lone genius or a dynamic duo, our quiz game is your ticket to hours of brain-teasing, laughter-inducing fun!</p>
- <p>🎮 How to Play:
-<br>1️⃣ Solo Mode: Challenge yourself and become the trivia master as you tackle a wide range of mind-boggling questions. Will you claim the title of the Ultimate Quiz Champ?
-<br>2️⃣ Duel Mode: Grab a friend, family member, or even a friendly rival for an epic head-to-head battle of wits! Test your skills, bragging rights are on the line!
-<br>🌍 Explore Diverse Topics: From history's mysteries to mathematics, science to sports, and everything in between, our quizzes cover it all. Choose the topic and buckle up!
-</p>
-<p>Get ready to flex those brain muscles, have a blast, make lasting memories and become a legend! It's time to start quizzing! 🤓✨"
-</p>
-</div>
+    <h1> Welcome to Quiztastic!</h1>
+    <p>🚀 Welcome to the Ultimate Quiz Showdown! 🌟</p>
+    <p>Are you ready to put your knowledge to the test and embark on a 
+      thrilling trivia adventure? Whether you're a lone genius or a dynamic duo,
+      our quiz game is your ticket to hours of brain-teasing, laughter-inducing fun!
+    </p>
+    <p>🎮 How to Play:<br>
+      1️⃣ Solo Mode: Challenge yourself and become the trivia master as you tackle a wide range of mind-boggling questions. Will you claim the title of the Ultimate Quiz Champ?<br>
+      2️⃣ Duel Mode: Grab a friend, family member, or even a friendly rival for an epic head-to-head battle of wits! Test your skills, bragging rights are on the line!<br>
+      🌍 Explore Diverse Topics: From history's mysteries to mathematics, science to sports, and everything in between, our quizzes cover it all. Choose the topic and buckle up!
+    </p>
+    <p>Get ready to flex those brain muscles, have a blast, 
+      make lasting memories and become a legend! 
+      It's time to start quizzing! 🤓✨"
+    </p>
+  </div>
 
-<div class="images-top">
-<img title="history" src="..\assets\history.png" alt="history">
-<img title="science" src="..\assets\science.png" alt="science">
-<img title="language" src="..\assets\language.png" alt="language">
-</div>
+  <div class="images-top">
+    <img title="history" src="..\assets\history.png" alt="history">
+    <img title="science" src="..\assets\science.png" alt="science">
+    <img title="language" src="..\assets\language.png" alt="language">
+  </div>
 
-<div class="button">
-  <RouterLink to="/quiz" custom v-slot="{ navigate }">
-    <button @click="navigate" role="link">LET'S GO</button>
-  </RouterLink>
-</div>
-    
-<div class="images-bottom">
-<img title="maths" src="..\assets\maths.png" alt="mathematics">
-<img title="geography" src="..\assets\geography.png" alt="geography">
-<img title="sweden" src="..\assets\sweden.png" alt="sweden">  
+  <div class="button">
+    <RouterLink to="/quiz" custom v-slot="{ navigate }">
+      <button @click="navigate" role="link">LET'S GO</button>
+    </RouterLink>
+  </div>
+
+  <div class="images-bottom">
+    <img title="maths" src="..\assets\maths.png" alt="mathematics">
+    <img title="geography" src="..\assets\geography.png" alt="geography">
+    <img title="sweden" src="..\assets\sweden.png" alt="sweden">  
+  </div>
 </div>
 </template>
 
