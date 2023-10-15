@@ -10,7 +10,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <nav>
         <RouterLink to="/about">About Us</RouterLink>
       </nav>
-      <img alt="game logo" class="logo" src="@/assets/Quiztastic.png" width="125" height="125" />
+      <img alt="game logo" class="logo" src="@/assets/Quiztastic.png" width="150" height="150" />
       <nav>
         <RouterLink to="/login">Login</RouterLink>
       </nav>
@@ -55,9 +55,6 @@ nav {
   background-color: #e2f3ec;
 
 }
-/*#app, body {
-  background-color: #B7F7DE;
-}*/
 
 
 
