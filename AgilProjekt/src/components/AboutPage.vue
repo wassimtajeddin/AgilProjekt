@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<style >
+<style scoped>
 
 
  .about-section {
@@ -22,6 +22,7 @@
 }
 
   h1 {
+    color: #0f9d58;
     font-size: 5em;
   }
 
