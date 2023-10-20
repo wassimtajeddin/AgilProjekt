@@ -35,17 +35,18 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-    
+  margin-bottom: 50px;
 }
 
 nav:hover {
     transform: rotate(5deg);
+    transition: all 0.3s ease-out;
 }
 
 nav {
     display: block;
     padding: 1rem;
-    font-size: 2.2rem;
+    font-size: 1.5rem;
 }
 a:hover {
   color: black;
@@ -55,6 +56,11 @@ a{
   text-decoration: none;
   color: white;
   font-family: math; 
+}
+
+img{
+  width: 80px;
+  height: 80px;
 }
 
 /*.homeview {
