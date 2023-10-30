@@ -1,5 +1,17 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+
+/* import { onMounted } from 'vue'
+function fetchTest() {
+  fetch('http://localhost:3000/').then(response => response.json()).then(data => {
+    console.log('test', data)
+  })
+    .catch(error => console.error(error))
+}
+onMounted(() => {
+  fetchTest()
+}) */
+
 import { ref } from 'vue'
 
 const showDropdown = ref(false)
@@ -13,6 +25,7 @@ window.addEventListener('click', (event) => {
     showDropdown.value = false
   }
 })
+
 </script>
 
 <template>
@@ -27,6 +40,18 @@ window.addEventListener('click', (event) => {
     <nav>
       <RouterLink to="/login">Login</RouterLink>
     </nav>
+
+    <nav>
+      <RouterLink to="/categories">Categories</RouterLink>
+    </nav>
+  </header>
+<!-- /*   <button @click="fetchTest">
+    fetch
+  </button> */ -->
+  <div class="homeview">
+    <RouterView />
+  </div>
+
     <div class="category-dropdown" @click="toggleDropdown">
       <nav>
         <span class="category-link">Categories</span>
@@ -39,16 +64,21 @@ window.addEventListener('click', (event) => {
     </div>
   </header>
   <RouterView />
+
 </template>
 
 <style scoped>
 header {
+
   background-color: #005b41;
+
   padding: 20px 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+
 }
 
 nav {
@@ -63,6 +93,7 @@ a,
   text-decoration: none;
   color: white;
   cursor: pointer;
+
 }
 
 .category-dropdown {
