@@ -1,16 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 
-/* import { onMounted } from 'vue'
-function fetchTest() {
-  fetch('http://localhost:3000/').then(response => response.json()).then(data => {
-    console.log('test', data)
-  })
-    .catch(error => console.error(error))
-}
-onMounted(() => {
-  fetchTest()
-}) */
+
 
 import { ref } from 'vue'
 
@@ -41,16 +32,16 @@ window.addEventListener('click', (event) => {
       <RouterLink to="/login">Login</RouterLink>
     </nav>
 
-    <nav>
+    <!--  <nav>
       <RouterLink to="/categories">Categories</RouterLink>
     </nav>
   </header>
-<!-- /*   <button @click="fetchTest">
+ /*   <button @click="fetchTest">
     fetch
   </button> */ -->
-  <div class="homeview">
+    <!-- <div class="homeview">
     <RouterView />
-  </div>
+  </div> -->
 
     <div class="category-dropdown" @click="toggleDropdown">
       <nav>
@@ -64,7 +55,6 @@ window.addEventListener('click', (event) => {
     </div>
   </header>
   <RouterView />
-
 </template>
 
 <style scoped>
@@ -85,7 +75,7 @@ nav {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
-  
+
 }
 
 a,
@@ -101,7 +91,7 @@ a,
   display: inline-block;
 }
 
-img{
+img {
   width: 80px;
   height: 80px;
 }
