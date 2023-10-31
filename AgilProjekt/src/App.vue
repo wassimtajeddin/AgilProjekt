@@ -1,5 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+
+
+
 import { ref } from 'vue'
 
 const showDropdown = ref(false)
@@ -13,6 +16,7 @@ window.addEventListener('click', (event) => {
     showDropdown.value = false
   }
 })
+
 </script>
 
 <template>
@@ -27,6 +31,18 @@ window.addEventListener('click', (event) => {
     <nav>
       <RouterLink to="/login">Login</RouterLink>
     </nav>
+
+    <!--  <nav>
+      <RouterLink to="/categories">Categories</RouterLink>
+    </nav>
+  </header>
+ /*   <button @click="fetchTest">
+    fetch
+  </button> */ -->
+    <!-- <div class="homeview">
+    <RouterView />
+  </div> -->
+
     <div class="category-dropdown" @click="toggleDropdown">
       <nav>
         <span class="category-link">Categories</span>
@@ -43,19 +59,23 @@ window.addEventListener('click', (event) => {
 
 <style scoped>
 header {
+
   background-color: #005b41;
+
   padding: 20px 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+
 }
 
 nav {
   display: flex;
   align-items: center;
-  font-size: 2.2rem;
-  margin-bottom: 50px;
+  font-size: 1.5rem;
+
 }
 
 a,
@@ -63,6 +83,7 @@ a,
   text-decoration: none;
   color: white;
   cursor: pointer;
+
 }
 
 .category-dropdown {
@@ -70,7 +91,7 @@ a,
   display: inline-block;
 }
 
-img{
+img {
   width: 80px;
   height: 80px;
 }
