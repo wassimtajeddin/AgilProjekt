@@ -18,7 +18,6 @@ window.addEventListener('click', (event) => {
     showDropdown.value = false
   }
 })
-
 </script>
 <template>
   <header>
@@ -33,24 +32,25 @@ window.addEventListener('click', (event) => {
       <RouterLink to="/login">Login</RouterLink>
     </nav>
 
-    <!--  <nav>
+    <!--   <nav>
       <RouterLink to="/categories">Categories</RouterLink>
-    </nav>
-  </header>
- /*   <button @click="fetchTest">
+    </nav> -->
+
+    <!-- /*   <button @click="fetchTest">
     fetch
   </button> */ -->
-    <!-- <div class="homeview">
-    <RouterView />
-  </div> -->
 
     <div class="category-dropdown" @click="toggleDropdown">
       <nav>
         <span class="category-link">Categories</span>
       </nav>
       <div v-if="showDropdown" class="dropdown-content">
-        <RouterLink to="/category/1">History</RouterLink>
-        <RouterLink to="/category/2">Mathematics</RouterLink>
+        <RouterLink to="/categories/history">History</RouterLink>
+        <RouterLink to="/categories/mathematics">Mathematics</RouterLink>
+        <RouterLink to="/categories/science">Science</RouterLink>
+        <RouterLink to="/categories/geography">Geography</RouterLink>
+        <RouterLink to="/categories/language">Language</RouterLink>
+        <RouterLink to="/categories/sweden">Sweden</RouterLink>
         <!-- Add more categories as needed -->
       </div>
     </div>
@@ -62,23 +62,18 @@ window.addEventListener('click', (event) => {
 
 <style scoped>
 header {
-
   background-color: #005b41;
-
   padding: 20px 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-
-
 }
 
 nav {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
-
 }
 
 a,
@@ -86,7 +81,6 @@ a,
   text-decoration: none;
   color: white;
   cursor: pointer;
-
 }
 
 .category-dropdown {
@@ -98,7 +92,6 @@ img {
   width: 80px;
   height: 80px;
 }
-
 
 .dropdown-content {
   display: flex;

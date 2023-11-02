@@ -18,11 +18,6 @@ const router = createRouter({
       component: () => import('../views/AboutView.vue')
     },
     {
-      path: '/quiz',
-      name: 'quiz',
-      component: () => import('../views/QuizView.vue')
-    },
-    {
       path: '/contact',
       name: 'contact',
       component: () => import('../views/ContactView.vue')
@@ -36,12 +31,52 @@ const router = createRouter({
       component: () => import('../views/LoginView.vue')
     },
     {
-      path: '/categories',
-      name: 'categories',
+      path: '/categories/history',
+      name: 'history',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/CategoriesView.vue')
+      component: () => import('../views/HistoryView.vue')
+    },
+    {
+      path: '/categories/mathematics',
+      name: 'mathematics',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/MathsView.vue')
+    },
+    {
+      path: '/categories/science',
+      name: 'science',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/ScienceView.vue')
+    },
+    {
+      path: '/categories/language',
+      name: 'language',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/LanguageView.vue')
+    },
+    {
+      path: '/categories/sweden',
+      name: 'sweden',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/SwedenView.vue')
+    },
+    {
+      path: '/categories/geography',
+      name: 'geography',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/GeographyView.vue')
     }
   ]
 })
