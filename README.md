@@ -1,5 +1,5 @@
 <p align="center">
-<img src="src/assets/Quiztastic.png" alt="QuiztasticLogo" width=150px/>
+<img src="AgilProjekt/src/assets/Quiztastic.png" alt="QuiztasticLogo" width=150px/>
 </p>
 
 # Quiztastic
