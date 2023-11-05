@@ -1,8 +1,10 @@
 body{
     margin: 0;
     background-color: black;
-    font-family: math;
+    font-family: math;      
 }
+
+  
 div.info{
     padding: 25px 50px;
     margin:0 50px;
