@@ -1,13 +1,13 @@
-body{
+body {
     margin: 0;
     background-color: black;
-    font-family: math;      
+    font-family: math;
+    color: white;
 }
 
-  
-div.info{
+div.info {
     padding: 25px 50px;
-    margin:0 50px;
+    margin: 0 50px;
     color: white;
     font-size: 1.5em;
 }
