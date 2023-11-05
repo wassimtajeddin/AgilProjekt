@@ -1,7 +1,16 @@
 <script setup>
+import { useStore } from 'vuex'
 import { RouterLink } from 'vue-router'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 const showDropdown = ref(false)
+
+const store = useStore()
+
+const isAuthenticated = computed(() => store.getters.isAuthenticated)
+
+const logout = () => {
+  store.dispatch('logout')
+}
 
 const toggleDropdown = () => {
   showDropdown.value = !showDropdown.value
@@ -12,6 +21,10 @@ window.addEventListener('click', (event) => {
     showDropdown.value = false
   }
 })
+
+const getCategoryLink = (category) => {
+  return isAuthenticated.value ? `/categories/${category}` : '/createAccountOrLogin';
+};
 </script>
 
 <template>
@@ -19,19 +32,20 @@ window.addEventListener('click', (event) => {
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/about">About Us</RouterLink>
     <img alt="game logo" class="logo" src="@/assets/Quiztastic.png" />
-    <RouterLink to="/login">Login</RouterLink>
+    <RouterLink v-if="isAuthenticated" to="/" @click="logout">Logout</RouterLink>
+    <RouterLink v-else to="/createAccountOrLogin">Login</RouterLink>
 
     <div class="category-dropdown" @click="toggleDropdown">
       <span class="category-link">Categories</span>
 
       <div v-if="showDropdown" class="dropdown-content">
-        <RouterLink to="/categories/history">History</RouterLink>
-        <RouterLink to="/categories/mathematics">Mathematics</RouterLink>
-        <RouterLink to="/categories/science">Science</RouterLink>
-        <RouterLink to="/categories/geography">Geography</RouterLink>
-        <RouterLink to="/categories/language">Language</RouterLink>
-        <RouterLink to="/categories/sweden">Sweden</RouterLink>
-      </div>
+      <RouterLink :to="getCategoryLink('history')">History</RouterLink>
+      <RouterLink :to="getCategoryLink('mathematics')">Mathematics</RouterLink>
+      <RouterLink :to="getCategoryLink('science')">Science</RouterLink>
+      <RouterLink :to="getCategoryLink('geography')">Geography</RouterLink>
+      <RouterLink :to="getCategoryLink('language')">Language</RouterLink>
+      <RouterLink :to="getCategoryLink('sweden')">Sweden</RouterLink>
+    </div>
     </div>
   </header>
 </template>
