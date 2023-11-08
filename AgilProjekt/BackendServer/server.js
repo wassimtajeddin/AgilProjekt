@@ -90,9 +90,20 @@ app.get('/api/sweden', (req, res) => {
     }
   })
 })
+db.get("SELECT name FROM sqlite_master WHERE type='table' AND name='users'", (err, row) => {
+  if (err) {
+    console.error(err.message);
+  } else if (!row) {
+    db.run('CREATE TABLE users(id INTEGER PRIMARY KEY, username TEXT, password TEXT)', (err) => {
+      if (err) {
+        console.error(err.message);
+      } else {
+        console.log('Table created successfully');
+      }
+    });
+  }
+});
 
-
-db_login.run('CREATE TABLE users(id INTEGER PRIMARY KEY, username TEXT, password TEXT)');
 
 // Registration endpoint
 app.post('/api/register', async (req, res) => {
